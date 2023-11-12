@@ -2,18 +2,11 @@ package Modelo;
 
 import Util.InterfaceUsuario;
 
-public class Financiamento {
-   protected double valorImovel;
+public abstract class Financiamento {
+    protected double valorImovel;
     protected int prazoFinanciamento;
     protected double taxaJurosAnual;
     protected double totalPagamento;
-    private InterfaceUsuario usuario;
-
-    public Financiamento(double valorImovel, int prazoFinanciamento, double taxaJurosAnual){ // Construtor
-        this.valorImovel = valorImovel;
-        this.prazoFinanciamento = prazoFinanciamento;
-        this.taxaJurosAnual = taxaJurosAnual;
-    }
 
     public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual){ //  Método para Cacular o valor do pagamento mensal
         this.valorImovel = valorImovel;
@@ -54,6 +47,7 @@ public class Financiamento {
         System.out.printf("\n O valor do imóvel do Financiamento " + i +" é de R$: " + "%.2f" ,valorImo);
 
     }
+
 
 
 

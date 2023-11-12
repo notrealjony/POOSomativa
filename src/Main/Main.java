@@ -1,6 +1,6 @@
 package Main;
-import Modelo.Financiamento;
 import Modelo.Casa;
+import Modelo.Financiamento;
 import Modelo.Terreno;
 import Modelo.Apartamento;
 import Util.InterfaceUsuario;
@@ -17,30 +17,31 @@ public class Main {
 
 
         InterfaceUsuario usuario1 = new InterfaceUsuario(); // Criação de usuários
-        Casa financiamento1 = new Casa(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual());
+        Casa financiamento1 = new Casa(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getTamanhoAreaConstruida(),usuario1.getTamanhoTerrenoCasa());
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento1);
 
 
-        Casa financiamento2 = new Casa(150000,70,3);
+        Casa financiamento2 = new Casa(10,2,1,50,100);
         double pagMensalFinanciamento2 = financiamento2.calcularPagamentoMensal(financiamento2.getValorImovel(), financiamento2.getPrazoFinanciamento(), financiamento2.getTaxaJurosAnual());
         double pagTotalFinanciamento2 = financiamento2.calcularTotalPagamento(pagMensalFinanciamento2, financiamento2.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento2);
 
 
-       Apartamento financiamento3 = new Apartamento(300000,100,8);
-        double pagMensalFinanciamento3 = financiamento3.calcularPagamentoMensal(financiamento3.getValorImovel(), financiamento3.getPrazoFinanciamento(), financiamento3.getTaxaJurosAnual());
-        double pagTotalFinanciamento3 = financiamento3.calcularTotalPagamento(pagMensalFinanciamento3, financiamento3.getPrazoFinanciamento());
-        listaFinanciamento.add(financiamento3);
+
+       Apartamento financiamento3 = new Apartamento(15,3,1,2,6);
+       double pagMensalFinanciamento3 = financiamento3.calcularPagamentoMensal(financiamento3.getValorImovel(), financiamento3.getPrazoFinanciamento(), financiamento3.getTaxaJurosAnual());
+       double pagTotalFinanciamento3 = financiamento3.calcularTotalPagamento(pagMensalFinanciamento3, financiamento3.getPrazoFinanciamento());
+       listaFinanciamento.add(financiamento3);
 
 
-        Apartamento financiamento4 = new Apartamento(500000,120,5);
+        Apartamento financiamento4 = new Apartamento(20,3,1,4,2);
         double pagMensalFinanciamento4 = financiamento4.calcularPagamentoMensal(financiamento4.getValorImovel(), financiamento4.getPrazoFinanciamento(), financiamento4.getTaxaJurosAnual());
         double pagTotalFinanciamento4 = financiamento4.calcularTotalPagamento(pagMensalFinanciamento4, financiamento4.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento4);
 
-        Terreno financiamento5 = new Terreno(1000000,150,6);
+        Terreno financiamento5 = new Terreno(50,5,1,"residencial");
         double pagMensalFinanciamento5 = financiamento5.calcularPagamentoMensal(financiamento5.getValorImovel(), financiamento5.getPrazoFinanciamento(), financiamento5.getTaxaJurosAnual());
         double pagTotalFinanciamento5 = financiamento5.calcularTotalPagamento(pagMensalFinanciamento5, financiamento5.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento5);
