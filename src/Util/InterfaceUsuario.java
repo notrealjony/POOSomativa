@@ -252,38 +252,24 @@ public class InterfaceUsuario {
                 System.out.println("Favor digitar um valor válido em reais.");
                 scanner.next();}}
 
-
-
-
-        //fórmulas para cálculos de financiamento
-        public double getValorImovel() {   // Metodo para conseguir o valor do Imovel
-            return valorImovel;
-        }
-
-        public int getPrazoFinanciamento () {
-            return prazoFinanciamento;
-        }
-
-        public double getTaxaJurosAnual () {
-            return taxaJurosAnual;
-        }
-
-    public int getTamanhoTerrenoCasa(){
-        return tamanhoTerrenoCasa;
+    public double getValorImovel() {
+        return valorImovel;
     }
-    public int getTamanhoAreaConstruida(){
+    public int getPrazoFinanciamento(){ // Metodo para conseguir o prazo do Financiamento
+        return prazoFinanciamento;
+    }
+
+    public double getTaxaJurosAnual(){ // Metodo para conseguir a taxa de juros anual
+        return taxaJurosAnual;
+    }
+
+    public int getTamanhoAreaConstruida() {
         return tamanhoAreaConstruida;
     }
-    public int getVagasGaragem(){
-        return vagasGaragem;
+
+    public int getTamanhoTerrenoCasa() {
+        return tamanhoTerrenoCasa;
     }
-    public int getNumeroAndar(){
-        return numeroAndar;
-    }
-
-
-
-
 }
 
 

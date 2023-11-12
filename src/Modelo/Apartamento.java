@@ -15,6 +15,7 @@ public class Apartamento extends Financiamento{
         this.numeroAndar = numeroAndar;
     }
 
+    @Override
     public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual){ //  Método para Cacular o valor do pagamento mensal
         double pagamentoMensal;
         this.valorImovel = valorImovel;
@@ -24,9 +25,24 @@ public class Apartamento extends Financiamento{
         valorMeses = ((prazoFinanciamento / 12) * 12);
         pagamentoMensal = valorImovel * (Math.pow((1 + taxaMensalAp), valorMeses))/ (Math.pow((1 +taxaMensalAp), (valorMeses - 1)));
         return pagamentoMensal;
+    }
+
+    public double calcularTotalPagamento(double pagamentoMensal, int prazoFinanciamento){ // Método para calcular o total do pagamento
+        totalPagamento = (pagamentoMensal * prazoFinanciamento);
+        return totalPagamento;}
+
+    @Override
+    public void imprimirFinanciamento(){
+        double valorPag = getTotalPagamento();
+        double valorImo = getValorImovel();
+        valorPag = Math.round(valorPag);
+        valorImo = Math.round(valorImo);
+        System.out.printf("\n O Apartamento possui um valor de R$: %.2f."  ,valorImo);
+        System.out.printf("\n O valor do Financiamento é de R$: " + "%.2f, o Apartamento possui %d vagas de estacionamento e está localizado no %d andar. \n", valorPag, getVagasGaragem(), getNumeroAndar());
 
 
     }
+
 
     public double getTaxaMensalApartamento(){
         taxaMensalAp = taxaJurosAnual / 12;

@@ -1,5 +1,6 @@
 package Modelo;
 
+
 public class Casa extends Financiamento {
     private int seguroObrigatorioCasa = 80;
     private int tamanhoAreaConstruida;
@@ -14,7 +15,7 @@ public class Casa extends Financiamento {
     }
 
 
-public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual){ //  Método para Cacular o valor do pagamento mensal
+    public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual){ //  Método para Cacular o valor do pagamento mensal
     this.valorImovel = valorImovel;
     this.prazoFinanciamento = prazoFinanciamento;
     this.taxaJurosAnual = taxaJurosAnual;
@@ -23,6 +24,23 @@ public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento
     pagamentoMensal = p + seguroObrigatorioCasa;                                                          // Juros Adicional
     return pagamentoMensal;
 }
+    public double calcularTotalPagamento(double pagamentoMensal, int prazoFinanciamento){ // Método para calcular o total do pagamento
+        totalPagamento = (pagamentoMensal * prazoFinanciamento);
+        return totalPagamento;}
+
+@Override
+    public void imprimirFinanciamento(){
+        double valorPag = getTotalPagamento();
+        double valorImo = getValorImovel();
+        valorPag = Math.round(valorPag);
+        valorImo = Math.round(valorImo);
+        System.out.printf("\n A casa possui um valor de R$: " + "%.2f" ,valorImo);
+        System.out.printf("\n O valor do Financiamento é de R$:" + "%.2f, a Casa possui " + " %d m² construidos e " + " %d m² totais do imóvel. \n", valorPag, getTamanhoAreaConstruida(), getTamanhoTerrenoCasa());
+
+
+    }
+
+
 
 
   public int getTamanhoTerrenoCasa(){

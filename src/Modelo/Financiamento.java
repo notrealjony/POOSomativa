@@ -8,21 +8,11 @@ public abstract class Financiamento {
     protected double taxaJurosAnual;
     protected double totalPagamento;
 
-    public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual){ //  Método para Cacular o valor do pagamento mensal
-        this.valorImovel = valorImovel;
-        this.prazoFinanciamento = prazoFinanciamento;
-        this.taxaJurosAnual = taxaJurosAnual;
-        double pagamentoMensal;
-        double p = (valorImovel / prazoFinanciamento) * (1 + (taxaJurosAnual / 12));
-        pagamentoMensal = p;
-        return pagamentoMensal;
-    }
+    public abstract double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual);
 
-    public double calcularTotalPagamento(double pagamentoMensal, int prazoFinanciamento){ // Método para calcular o total do pagamento
-        totalPagamento = (pagamentoMensal * prazoFinanciamento);
-        return totalPagamento;
 
-    }
+    public abstract double calcularTotalPagamento(double pagamentoMensal, int prazoFinanciamento); // Método para calcular o total do pagamento
+
 
     public double getValorImovel(){   // Metodo para conseguir o valor do Imovel
         return valorImovel;
@@ -47,7 +37,13 @@ public abstract class Financiamento {
         System.out.printf("\n O valor do imóvel do Financiamento " + i +" é de R$: " + "%.2f" ,valorImo);
 
     }
-
+    public void imprimirFinanciamento(){
+        double valorPag = getTotalPagamento();
+        double valorImo = getValorImovel();
+        valorPag = Math.round(valorPag);
+        valorImo = Math.round(valorImo);
+        System.out.printf("\n O valor do Financiamento é de R$: " + "%.2f", valorPag);
+        System.out.printf("\n O valor do imóvel do Financiamento é de R$: " + "%.2f" ,valorImo);}
 
 
 
