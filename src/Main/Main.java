@@ -38,17 +38,17 @@ public class Main {
         ArrayList listaFinanciamento = new ArrayList<>();
 
 
-        InterfaceUsuario usuario1 = new InterfaceUsuario(); // Criação de usuários
+        /* InterfaceUsuario usuario1 = new InterfaceUsuario(); // Criação de usuários
         Casa financiamento1 = new Casa(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getTamanhoAreaConstruida(),usuario1.getTamanhoTerrenoCasa());
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
-        listaFinanciamento.add(financiamento1);
+        listaFinanciamento.add(financiamento1); */
 
 
-         /* Casa financiamento1 = new Casa(100,15,2,50,100);  // Teste HARDCODE
+        Casa financiamento1 = new Casa(100,15,2,50,100);  // Teste HARDCODE
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
-        listaFinanciamento.add(financiamento1); */
+        listaFinanciamento.add(financiamento1);
 
 
         Casa financiamento2 = new Casa(10,2,1,50,100);
@@ -57,7 +57,7 @@ public class Main {
         listaFinanciamento.add(financiamento2);
 
 
-       Apartamento financiamento3 = new Apartamento(15,3,1,2,6);
+       Apartamento financiamento3 = new Apartamento(500000,120,10,2,7);
        double pagMensalFinanciamento3 = financiamento3.calcularPagamentoMensal(financiamento3.getValorImovel(), financiamento3.getPrazoFinanciamento(), financiamento3.getTaxaJurosAnual());
        double pagTotalFinanciamento3 = financiamento3.calcularTotalPagamento(pagMensalFinanciamento3, financiamento3.getPrazoFinanciamento());
        listaFinanciamento.add(financiamento3);

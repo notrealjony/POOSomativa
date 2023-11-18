@@ -48,7 +48,7 @@ public class InterfaceUsuario {
                                 System.out.println("Digite em quantos meses deseja financiar: ");
                                 this.prazoFinanciamento = scanner.nextInt();
                                 if (prazoFinanciamento <= 1) {
-                                    System.out.println("Favor digitar um valor válido de prazo. (Digite o número de Meses)");
+                                    System.out.println("Favor digitar um valor válido de prazo. (Digite o número de meses)");
                                 } else {
                                     break;
                                 }

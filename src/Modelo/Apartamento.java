@@ -21,9 +21,9 @@ public class Apartamento extends Financiamento{
         this.valorImovel = valorImovel;
         this.prazoFinanciamento = prazoFinanciamento;
         this.taxaJurosAnual = taxaJurosAnual;
-        taxaMensalAp = taxaJurosAnual / 12;
-        valorMeses = ((prazoFinanciamento / 12) * 12);
-        pagamentoMensal = valorImovel * (Math.pow((1 + taxaMensalAp), valorMeses))/ (Math.pow((1 +taxaMensalAp), (valorMeses - 1)));
+        taxaMensalAp = (taxaJurosAnual / 12) / 100;
+        valorMeses = ((double) prazoFinanciamento / 12 ) * 12;
+        pagamentoMensal = ((valorImovel * taxaMensalAp) * (Math.pow((1 + taxaMensalAp), (valorMeses)))) / (Math.pow((1 + taxaMensalAp), (valorMeses)) - 1);
         return pagamentoMensal;
     }
 
