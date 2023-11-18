@@ -37,18 +37,22 @@ public class Main {
         Locale.setDefault(new Locale("pt", "BR")); //Linguagem em PTBR para facilitar digitação nos inputs.
         ArrayList listaFinanciamento = new ArrayList<>();
 
-
-        /* InterfaceUsuario usuario1 = new InterfaceUsuario(); // Criação de usuários
+/*
+        InterfaceUsuario usuario1 = new InterfaceUsuario(); // Criação de usuários
         Casa financiamento1 = new Casa(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getTamanhoAreaConstruida(),usuario1.getTamanhoTerrenoCasa());
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
-        listaFinanciamento.add(financiamento1); */
+        listaFinanciamento.add(financiamento1);
+        */
 
 
-        Casa financiamento1 = new Casa(100,15,2,50,100);  // Teste HARDCODE
+
+        Casa financiamento1 = new Casa(500000,120,10,50,100);  // Teste HARDCODE
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento1);
+
+
 
 
         Casa financiamento2 = new Casa(10,2,1,50,100);
@@ -68,15 +72,15 @@ public class Main {
         double pagTotalFinanciamento4 = financiamento4.calcularTotalPagamento(pagMensalFinanciamento4, financiamento4.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento4);
 
-        Terreno financiamento5 = new Terreno(50,5,1,"residencial");
+        Terreno financiamento5 = new Terreno(500000,120,10,"residencial");
         double pagMensalFinanciamento5 = financiamento5.calcularPagamentoMensal(financiamento5.getValorImovel(), financiamento5.getPrazoFinanciamento(), financiamento5.getTaxaJurosAnual());
         double pagTotalFinanciamento5 = financiamento5.calcularTotalPagamento(pagMensalFinanciamento5, financiamento5.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento5);
 
 
         mostrarFinanciamentos(listaFinanciamento);
-        System.out.println("\n O valor da soma de todos os imóveis é de " + calcularTotal(listaFinanciamento) + "0" );
-        System.out.println(" O valor da soma de todos os financiamentos é de: " + calcularSomaPagamentos(listaFinanciamento) + "0");
+        System.out.println("\n O valor da soma de todos os imóveis é de " + calcularTotal(listaFinanciamento));
+        System.out.println(" O valor da soma de todos os financiamentos é de: " + calcularSomaPagamentos(listaFinanciamento));
 
 
         }

@@ -1,5 +1,4 @@
 package Util;
-import Modelo.Financiamento;
 import java.util.Scanner;
 import java.util.Locale;
 import java.util.InputMismatchException;
@@ -200,7 +199,7 @@ public class InterfaceUsuario {
                             System.out.println("Digite em quantos meses deseja financiar: ");
                             this.prazoFinanciamento = scanner.nextInt();
                             if (prazoFinanciamento <= 1) {
-                                System.out.println("Favor digitar um valor válido de prazo. (Digite o número de Meses)");
+                                System.out.println("Favor digitar um valor válido de prazo. (Digite um valor diferente de 1)");
                             } else {
                                 break;
                             }
@@ -241,7 +240,7 @@ public class InterfaceUsuario {
 
 
                     }
-            else if (opcao == 0){
+            else if (opcao == 0){  //sair do programa
                     System.out.println("Saindo...");
                 }
             else{

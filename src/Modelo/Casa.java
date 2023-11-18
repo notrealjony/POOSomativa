@@ -34,7 +34,7 @@ public class Casa extends Financiamento {
         double valorImo = getValorImovel();
         valorPag = Math.round(valorPag);
         valorImo = Math.round(valorImo);
-        System.out.printf("\n A casa possui um valor de R$: " + "%.2f" ,valorImo);
+        System.out.printf("\n A casa possui um valor de R$:" + "%.2f" ,valorImo);
         System.out.printf("\n O valor do Financiamento é de R$:" + "%.2f, a Casa possui " + " %d m² construidos e " + " %d m² totais do imóvel. \n", valorPag, getTamanhoAreaConstruida(), getTamanhoTerrenoCasa());
 
 

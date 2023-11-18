@@ -37,8 +37,8 @@ public class Apartamento extends Financiamento{
         double valorImo = getValorImovel();
         valorPag = Math.round(valorPag);
         valorImo = Math.round(valorImo);
-        System.out.printf("\n O Apartamento possui um valor de R$: %.2f."  ,valorImo);
-        System.out.printf("\n O valor do Financiamento é de R$: " + "%.2f, o Apartamento possui %d vagas de estacionamento e está localizado no %d andar. \n", valorPag, getVagasGaragem(), getNumeroAndar());
+        System.out.printf("\n O Apartamento possui um valor de R$:%.2f."  ,valorImo);
+        System.out.printf("\n O valor do Financiamento é de R$:" + "%.2f. O Apartamento possui %d vagas de estacionamento e está localizado no %d andar. \n", valorPag, getVagasGaragem(), getNumeroAndar());
 
 
     }
