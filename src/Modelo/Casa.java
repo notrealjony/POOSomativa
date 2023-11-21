@@ -14,6 +14,12 @@ public class Casa extends Financiamento {
     this.tamanhoTerrenoCasa = tamanhoTerrenoCasa;
     }
 
+    @Override public String toString() {
+        return "Imóvel tipo Casa > Valor: " + getValorImovel() + " reais.  Taxa de Juros: " + getTaxaJurosAnual() +
+                "% ao ano.  Prazo: " + getPrazoFinanciamento() + " meses,  Tamanho Construido: " + getTamanhoAreaConstruida() + "m²,  Tamanho Total: " + getTamanhoTerrenoCasa() + "m². \n";
+    }
+
+
 
     public double calcularPagamentoMensal(double valorImovel, int prazoFinanciamento,double taxaJurosAnual){ //  Método para Cacular o valor do pagamento mensal
     this.valorImovel = valorImovel;

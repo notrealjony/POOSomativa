@@ -28,6 +28,12 @@ public abstract class Financiamento {
         return totalPagamento;
     }
 
+    @Override
+    public String toString() {
+        return "Financiamento: " + getClass() + ", Valor: " + getValorImovel() + "Taxa de Juros:" + getTaxaJurosAnual() + "Prazo:" + getPrazoFinanciamento();
+    }
+
+
     public void mostrarDadosFinanciamento(int i){  // Metodo para mostrar os valores do financiamento e imóvel
         double valorPag = getTotalPagamento();
         double valorImo = getValorImovel();

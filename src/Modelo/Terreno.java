@@ -38,5 +38,8 @@ public class Terreno extends Financiamento {
         return tipoZona;
     }
 
-
+    @Override public String toString() {
+        return "Imóvel tipo Terreno > Valor: " + getValorImovel() + " reais.  Taxa de Juros: " + getTaxaJurosAnual() +
+                "% ao ano.  Prazo:" + getPrazoFinanciamento() + " meses,  Tipo de zona: " + getTipoZona() + ".\n";
+    }
 }
