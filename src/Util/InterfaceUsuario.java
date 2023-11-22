@@ -1,4 +1,6 @@
 package Util;
+import Modelo.Casa;
+
 import java.util.Scanner;
 import java.util.Locale;
 import java.util.InputMismatchException;
@@ -6,6 +8,7 @@ import java.util.InputMismatchException;
 
 public class InterfaceUsuario {
    double valorImovel;
+   int tipofinanciamento;
    int prazoFinanciamento;
    double taxaJurosAnual;
     int tamanhoAreaConstruida;
@@ -22,7 +25,7 @@ public class InterfaceUsuario {
         System.out.println("Digite 2 Para Criar um Financiamento para um Apartamento.");
         System.out.println("Digite 3 Para Criar um Financiamento para um Terreno.");
         System.out.println("Digite 0 Para Sair.");
-        int opcao = scanner.nextInt();
+         int opcao = scanner.nextInt();
 
 
         if (opcao == 1) { // Tipo Casa

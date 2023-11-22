@@ -43,6 +43,7 @@ public class Main implements Serializable {
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento1);
 
+        InterfaceUsuario usuario2 = new InterfaceUsuario();
 
 
       /*  Casa financiamento1 = new Casa(500000,120,10,50,100);  // Teste HARDCODE
@@ -52,27 +53,28 @@ public class Main implements Serializable {
 
 
 
-        Casa financiamento2 = new Casa(10,2,1,50,100);
+        Casa financiamento2 = new Casa(500000,75,5,75,150);
         double pagMensalFinanciamento2 = financiamento2.calcularPagamentoMensal(financiamento2.getValorImovel(), financiamento2.getPrazoFinanciamento(), financiamento2.getTaxaJurosAnual());
         double pagTotalFinanciamento2 = financiamento2.calcularTotalPagamento(pagMensalFinanciamento2, financiamento2.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento2);
 
 
-       Apartamento financiamento3 = new Apartamento(500000,120,10,2,7);
+       Apartamento financiamento3 = new Apartamento(750000,100,3,2,7);
        double pagMensalFinanciamento3 = financiamento3.calcularPagamentoMensal(financiamento3.getValorImovel(), financiamento3.getPrazoFinanciamento(), financiamento3.getTaxaJurosAnual());
        double pagTotalFinanciamento3 = financiamento3.calcularTotalPagamento(pagMensalFinanciamento3, financiamento3.getPrazoFinanciamento());
        listaFinanciamento.add(financiamento3);
 
 
-        Apartamento financiamento4 = new Apartamento(20,3,1,4,2);
+        Apartamento financiamento4 = new Apartamento(1000000,150,8,4,15);
         double pagMensalFinanciamento4 = financiamento4.calcularPagamentoMensal(financiamento4.getValorImovel(), financiamento4.getPrazoFinanciamento(), financiamento4.getTaxaJurosAnual());
         double pagTotalFinanciamento4 = financiamento4.calcularTotalPagamento(pagMensalFinanciamento4, financiamento4.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento4);
 
-        Terreno financiamento5 = new Terreno(500000,120,10,"residencial");
+        Terreno financiamento5 = new Terreno(1500000,180,5,"Residencial");
         double pagMensalFinanciamento5 = financiamento5.calcularPagamentoMensal(financiamento5.getValorImovel(), financiamento5.getPrazoFinanciamento(), financiamento5.getTaxaJurosAnual());
         double pagTotalFinanciamento5 = financiamento5.calcularTotalPagamento(pagMensalFinanciamento5, financiamento5.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento5);
+
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Financiamentos.txt"));
