@@ -1,5 +1,6 @@
-Imóvel tipo Casa > Valor: 500000.0 reais.  Taxa de Juros: 10.0% ao ano.  Prazo: 120 meses,  Tamanho Construido: 50m²,  Tamanho Total: 100m². 
-Imóvel tipo Casa > Valor: 10.0 reais.  Taxa de Juros: 1.0% ao ano.  Prazo: 2 meses,  Tamanho Construido: 50m²,  Tamanho Total: 100m². 
-Imóvel tipo Apartamento > Valor: 500000.0 reais.  Taxa de Juros: 10.0% ao ano.  Prazo:120meses,   Vagas Disponíveis:2Vagas para carros,  Imóvel localizado no 7 andar.
-Imóvel tipo Apartamento > Valor: 20.0 reais.  Taxa de Juros: 1.0% ao ano.  Prazo:3meses,   Vagas Disponíveis:4Vagas para carros,  Imóvel localizado no 2 andar.
-Imóvel tipo Terreno > Valor: 500000.0 reais.  Taxa de Juros: 10.0% ao ano.  Prazo:120 meses,  Tipo de zona: residencial.
+
+ Imóvel tipo Casa > Valor: 500000.0 reais.  Taxa de Juros: 10.0% ao ano.  Prazo: 120 meses,  Tamanho Construido: 50m²,  Tamanho Total: 100m².
+ Imóvel tipo Casa > Valor: 10.0 reais.  Taxa de Juros: 1.0% ao ano.  Prazo: 2 meses,  Tamanho Construido: 50m²,  Tamanho Total: 100m².
+ Imóvel tipo Apartamento > Valor: 500000.0 reais.  Taxa de Juros: 10.0% ao ano.  Prazo: 120meses,   Vagas Disponíveis:2Vagas para carros,  Imóvel localizado no 7 andar.
+ Imóvel tipo Apartamento > Valor: 20.0 reais.  Taxa de Juros: 1.0% ao ano.  Prazo: 3meses,   Vagas Disponíveis:4Vagas para carros,  Imóvel localizado no 2 andar.
+ Imóvel tipo Terreno > Valor: 500000.0 reais.  Taxa de Juros: 10.0% ao ano.  Prazo: 120 meses,  Tipo de zona: residencial.

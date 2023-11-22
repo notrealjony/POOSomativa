@@ -15,8 +15,8 @@ public class Casa extends Financiamento {
     }
 
     @Override public String toString() {
-        return "Imóvel tipo Casa > Valor: " + getValorImovel() + " reais.  Taxa de Juros: " + getTaxaJurosAnual() +
-                "% ao ano.  Prazo: " + getPrazoFinanciamento() + " meses,  Tamanho Construido: " + getTamanhoAreaConstruida() + "m²,  Tamanho Total: " + getTamanhoTerrenoCasa() + "m². \n";
+        return "\n Imóvel tipo Casa > Valor: " + getValorImovel() + " reais.  Taxa de Juros: " + getTaxaJurosAnual() +
+                "% ao ano.  Prazo: " + getPrazoFinanciamento() + " meses,  Tamanho Construido: " + getTamanhoAreaConstruida() + "m²,  Tamanho Total: " + getTamanhoTerrenoCasa() + "m².";
     }
 
 

@@ -44,12 +44,11 @@ public class Main implements Serializable {
         listaFinanciamento.add(financiamento1); */
 
 
+
         Casa financiamento1 = new Casa(500000,120,10,50,100);  // Teste HARDCODE
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento1);
-
-
 
 
 
@@ -103,6 +102,29 @@ public class Main implements Serializable {
             e.printStackTrace();
         }
 
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("ListaFinanciamentos.txt"));
+            writer.write(listaFinanciamento.toString());
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Erro na execução do Arquivo!");
+            e.printStackTrace();
+        }
+
+
+        try {
+            reader = new BufferedReader(new FileReader("ListaFinanciamentos.txt"));
+            String line;
+            while((line = reader.readLine()) !=null){
+                System.out.println(line);}
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Erro, Arquivo não encontrado.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("Erro na Leitura do Arquivo");
+            e.printStackTrace();
+        }
 
         mostrarFinanciamentos(listaFinanciamento);
         System.out.println("\n O valor da soma de todos os imóveis é de " + calcularTotal(listaFinanciamento));
