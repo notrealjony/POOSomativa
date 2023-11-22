@@ -43,8 +43,6 @@ public class Main implements Serializable {
         double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento1);
 
-        InterfaceUsuario usuario2 = new InterfaceUsuario();
-
 
       /*  Casa financiamento1 = new Casa(500000,120,10,50,100);  // Teste HARDCODE
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
