@@ -57,7 +57,7 @@ public class Apartamento extends Financiamento{
     }
     @Override public String toString() {
         return "Imóvel tipo Apartamento > Valor: " + getValorImovel() + " reais.  Taxa de Juros: " + getTaxaJurosAnual() +
-                "% ao ano.  Prazo:" + getPrazoFinanciamento() + "meses,   Vagas Disponíveis:" + getVagasGaragem() + "Vagas para carros,  " +
+                "% ao ano.  Prazo: " + getPrazoFinanciamento() + "meses,   Vagas Disponíveis:" + getVagasGaragem() + "Vagas para carros,  " +
                 "Imóvel localizado no " + getNumeroAndar() + " andar.\n";
     }
 
