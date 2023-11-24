@@ -38,11 +38,27 @@ public class Main implements Serializable {
         ArrayList listaFinanciamento = new ArrayList<>();
 
         InterfaceUsuario usuario1 = new InterfaceUsuario(); // Criação de usuários
-        Casa financiamento1 = new Casa(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getTamanhoAreaConstruida(),usuario1.getTamanhoTerrenoCasa());
-        double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
-        double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
-        listaFinanciamento.add(financiamento1);
+        Financiamento financiamento1 = null;
+          switch (usuario1.opcao){
+            case 1:{
+                financiamento1 = new Casa(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getTamanhoAreaConstruida(),usuario1.getTamanhoTerrenoCasa());
+            break;
+            }
+            case 2: {
+                financiamento1 = new Apartamento(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getVagasGaragem(),usuario1.getNumeroAndar());
+                break;
+            }
+            case 3: {
+                financiamento1 = new Terreno(usuario1.getValorImovel(), usuario1.getPrazoFinanciamento(), usuario1.getTaxaJurosAnual(),usuario1.getTipoZona());
+                break;
+            }
+          }
+            if(financiamento1 != null){
+            double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
+            double pagTotalFinanciamento1 = financiamento1.calcularTotalPagamento(pagMensalFinanciamento1, financiamento1.getPrazoFinanciamento());
+            listaFinanciamento.add(financiamento1);
 
+        }
 
         /*  Casa financiamento1 = new Casa(500000,120,10,50,100);  // Teste Hardcode
         double pagMensalFinanciamento1 = financiamento1.calcularPagamentoMensal(financiamento1.getValorImovel(), financiamento1.getPrazoFinanciamento(), financiamento1.getTaxaJurosAnual());
@@ -50,17 +66,15 @@ public class Main implements Serializable {
         listaFinanciamento.add(financiamento1); */
 
 
-
         Casa financiamento2 = new Casa(500000,75,5,75,150);
         double pagMensalFinanciamento2 = financiamento2.calcularPagamentoMensal(financiamento2.getValorImovel(), financiamento2.getPrazoFinanciamento(), financiamento2.getTaxaJurosAnual());
         double pagTotalFinanciamento2 = financiamento2.calcularTotalPagamento(pagMensalFinanciamento2, financiamento2.getPrazoFinanciamento());
         listaFinanciamento.add(financiamento2);
 
-
-       Apartamento financiamento3 = new Apartamento(750000,100,3,2,7);
-       double pagMensalFinanciamento3 = financiamento3.calcularPagamentoMensal(financiamento3.getValorImovel(), financiamento3.getPrazoFinanciamento(), financiamento3.getTaxaJurosAnual());
-       double pagTotalFinanciamento3 = financiamento3.calcularTotalPagamento(pagMensalFinanciamento3, financiamento3.getPrazoFinanciamento());
-       listaFinanciamento.add(financiamento3);
+        Apartamento financiamento3 = new Apartamento(750000,100,3,2,7);
+        double pagMensalFinanciamento3 = financiamento3.calcularPagamentoMensal(financiamento3.getValorImovel(), financiamento3.getPrazoFinanciamento(), financiamento3.getTaxaJurosAnual());
+        double pagTotalFinanciamento3 = financiamento3.calcularTotalPagamento(pagMensalFinanciamento3, financiamento3.getPrazoFinanciamento());
+        listaFinanciamento.add(financiamento3);
 
 
         Apartamento financiamento4 = new Apartamento(1000000,150,8,4,15);
@@ -76,6 +90,7 @@ public class Main implements Serializable {
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("Financiamentos.txt"));
+            assert financiamento1 != null;
             writer.write(financiamento1.toString());
             writer.write(financiamento2.toString());
             writer.write(financiamento3.toString());
@@ -84,6 +99,10 @@ public class Main implements Serializable {
             writer.close();
         } catch (IOException e) {
             System.out.println("Erro na execução do Arquivo!");
+            e.printStackTrace();
+        }
+        catch (NullPointerException e){
+            System.out.println("Erro Financanciamento Nulo.");
             e.printStackTrace();
         }
 
