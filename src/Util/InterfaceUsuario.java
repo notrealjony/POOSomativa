@@ -8,7 +8,6 @@ import java.util.InputMismatchException;
 
 public class InterfaceUsuario {
    double valorImovel;
-   int tipofinanciamento;
    int prazoFinanciamento;
    double taxaJurosAnual;
     int tamanhoAreaConstruida;
